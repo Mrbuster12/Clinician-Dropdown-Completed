@@ -1,0 +1,13 @@
+[build]
+publish = "."
+
+[[headers]]
+for = "/*.json"
+  [headers.values]
+  Content-Type = "application/json; charset=utf-8"
+  Cache-Control = "no-store"
+
+[[headers]]
+for = "/homework/*"
+  [headers.values]
+  Cache-Control = "public, max-age=600"
